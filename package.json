@@ -1,0 +1,42 @@
+{
+  "name": "siyu-private-operation-workbench",
+  "version": "0.2.2",
+  "description": "私域社群运营台：私域概览、社群资产、成员分层、运营日历、转化漏斗、运营复盘与群话术库",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/x68x78-cyber/xga6878.git"
+  },
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "dsh-desktop-workbenches"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "scripts": {
+    "build": "node scripts/build-client.mjs"
+  }
+}

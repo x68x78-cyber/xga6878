@@ -1,0 +1,5 @@
+- insert:
+    - id: siyu-private-operation-workbench
+      name: siyu-private-operation-workbench
+      config:
+        root: !!js dshHomePath('siyu-workbench')
